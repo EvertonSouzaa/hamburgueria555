@@ -33,6 +33,9 @@
     <div class="introducao">
       <div class="introducao-conteudo">
         <h1 class="font-1-xxl cor-0"><span class="cor-p1">555 Burguer</span> Muito mais do que um simples hambúrguer<span class="cor-p1">.</span></h1>
+        <p class="font-2-l cor-5">De Quinta. à Sabado.<span class="aberto"></span><br>
+          <span class="cor-p1">das 18:00h às 23:00</span>
+        </p>
         <p class="font-2-l cor-5">Deliciosos hambúrgueres artesanais entregues diretamente na sua porta! Nosso cardápio variado inclui desde o clássico X-Burguer até criações exclusivas, feitas com ingredientes frescos e de qualidade. Peça online e desfrute de um sabor irresistível no conforto de sua casa. 555 BURGUER: mais sabor em cada mordida, onde você estiver!</p>
         <a class="botao" href="#cardapio">Faça o seu pedido</a>
       </div>
@@ -44,365 +47,131 @@
 
   <h2 id="cardapio" class="font-1-xxl">Cardápio<span class="cor-p1">.</span></h2>
 
-  <div class="card-container">
-    <div class="card">
-      <img src="./img/burguer555.jpg" alt="Produto 1">
-      <h3>X BURGUER </h3>
-      <p>CARNE - QUEIJO - ALFACE - CHEDDAR
-        CATUPIRY - MAIONESE - KETCHUP - BATATA
-        PALHA</p>
-      <p class="price">R$ 14,00</p>
-      <div class="quantity">
-        <button onclick="decreaseQuantity('quantity3')">-</button>
-        <input type="number" id="quantity3" value="1" min="1">
-        <button onclick="increaseQuantity('quantity3')">+</button>
-      </div>
-      <button onclick="addToCart('X BURGUER', 14, 'quantity3')">Comprar</button>
-
-      <!-- Adicione mais cards conforme necessário -->
-    </div>
-    <div class="card">
-      <img src="./img/burguer555.jpg" alt="Produto 1">
-      <h3>EGG X BURGUER</h3>
-      <p>CARNE - OVO - ALFACE - ALFACE - QUEIJO
-        CHEDDAR - CATUPIRY - MAIONESE - KETCHUP
-        BATATA PALHA.</p>
-      <p class="price">R$ 15,00</p>
-      <div class="quantity">
-        <button onclick="decreaseQuantity('quantity4')">-</button>
-        <input type="number" id="quantity4" value="1" min="1">
-        <button onclick="increaseQuantity('quantity4')">+</button>
-      </div>
-      <button onclick="addToCart('EGG X BURGUER', 15, 'quantity4')">Comprar</button>
-      <!-- Adicione mais cards conforme necessário -->
-    </div>
-    <div class="card">
-      <img src="./img/burguer555.jpg" alt="Produto 1">
-      <h3>X BACON</h3>
-      <p>CARNE - BACON - ALFACE - QUEIJO -
-        CHEDDAR - CATUPIRY - MAIONESE -
-        KETCHUP - BATATA PALHA.</p>
-      <p class="price">R$ 17,00</p>
-      <button onclick="sendToWhatsApp('X BACON','R$17,00')">Comprar</button>
-      <!-- Adicione mais cards conforme necessário -->
-    </div>
-    <div class="card">
-      <img src="./img/burguer555.jpg" alt="Produto 1">
-      <h3>X CALABRESA</h3>
-      <p>CARNE - CALABRESA - ALFACE - QUEIJO- CHEDDAR - CATUPIRY - MAIONESE
-        KETCHUP - BATATA PALHA.</p>
-      <p class="price">R$ 17,00</p>
-      <button onclick="sendToWhatsApp('X CALABRESA','R$17,00')">Comprar</button>
-      <!-- Adicione mais cards conforme necessário -->
-    </div>
-    <div class="card">
-      <img src="./img/burguer555.jpg" alt="Produto 1">
-      <h3>EGG X BACON</h3>
-      <p>CARNE - OVO - ALFACE - QUEIJO
-        CHEDDAR - CATUPIRY - MAIONESE
-        KETCHUP - BATATA PALHA.</p>
-      <p class="price">R$ 18,00</p>
-      <button onclick="sendToWhatsApp('EGG X BACON','R$18,00')">Comprar</button>
-      <!-- Adicione mais cards conforme necessário -->
-    </div>
-    <div class="card">
-      <img src="./img/burguer555.jpg" alt="Produto 1">
-      <h3>EGG X CALABRESA</h3>
-      <p>CARNE - OVO - CALABRESA - ALFACE -
-        QUEIJO - PRESUNTO - CHEDDAR
-        CATUPIRY - MAIONESE -
-        KETCHUP - BATATA PALHA.</p>
-      <p class="price">R$ 18,00</p>
-      <button onclick="sendToWhatsApp('EGG X CALABRESA','R$18,00')">Comprar</button>
-      <!-- Adicione mais cards conforme necessário -->
-    </div>
-    <div class="card">
-      <img src="./img/burguer555.jpg" alt="Produto 1">
-      <h3> X BACON COM CALABRESA</h3>
-      <p>CARNE - BACON - CALABRESA
-        ALFACE - QUEIJO - CHEDDAR
-        CATUPIRY - MAIONESE -
-        KETCHUP - BATATA PALHA.</p>
-      <p class="price">R$ 18,00</p>
-      <button onclick="sendToWhatsApp('X BACON COM CALABRESA','R$18,00')">Comprar</button>
-      <!-- Adicione mais cards conforme necessário -->
-    </div>
-    <div class="card">
-      <img src="./img/burguer555.jpg" alt="Produto 1">
-      <h3>EGG X BACON COM
-        CALABRESA</h3>
-      <p>CARNE - OVO - BACON - CALABRESA -
-        ALFACE - QUEIJO - CHEDDAR
-        CATUPIRY - MAIONESE -
-        KETCHUP - BATATA PALHA.</p>
-      <p class="price">R$ 21,00</p>
-      <button onclick="sendToWhatsApp('EGG X BACON COM CALABRESA','R$21,00')">Comprar</button>
-      <!-- Adicione mais cards conforme necessário -->
-    </div>
-    <div class="card">
-      <img src="./img/burguer555.jpg" alt="Produto 1">
-      <h3>X TUDO </h3>
-      <p>CARNE - BACON - OVO -
-        CALABRESA - ALFACE - QUEIJO -
-        CHEDDAR - CATUPIRY - MAIONESE -
-        KETCHUP - MILHO - ERVILHA -
-        AZEITONA - BATATA PALHA.</p>
-      <p class="price">R$ 23,00</p>
-      <button onclick="sendToWhatsApp('X TUDO','R$23,00')">Comprar</button>
-    </div>
-    <!-- <div class="card">
-    <img src="./img/burguer555.jpg" alt="Produto 1">
-    <h3>X CALABRESA</h3>
-    <p>CARNE - CALABRESA - ALFACE - QUEIJO - CHEDDAR - CATUPIRY - MAIONESE - KETCHUP - BATATA PALHA.</p>
-    <p class="price">R$ 17,00</p>
-    <div class="quantity">
-      <button onclick="decreaseQuantity('quantity1')">-</button>
-      <input type="number" id="quantity1" value="1" min="1">
-      <button onclick="increaseQuantity('quantity1')">+</button>
-    </div>
-    <button onclick="addToCart('X CALABRESA', 17, 'quantity1')">Comprar</button>
-    <h3>Total: R$ <span id="total">0,00</span></h3>
-  </div> -->
-    <div>
-      <h2 id="combos" class="font-1-xxl">Combos<span class="cor-p1">.</span></h2>
-
-      <div class="card-container">
+  <ul class="custom-controls">
+    <li><img src="img/hamburguers/burguer.jpg" alt=""></li>
+    <li><img src="img/hamburguers/egg-burguer.jpg" alt=""></li>
+    <li><img src="img/hamburguers/xburguer.jpg" alt=""></li>
+    <li><img src="img/burguer555.jpg" alt=""></li>
+    <li><img src="img/burguer555.jpg" alt=""></li>
+    <li><img src="img/burguer555.jpg" alt=""></li>
+  </ul>
+  <div class="slide-wrapper">
+    <ul class="slide">
+      <li>
         <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>COMBO 1 </h3>
-          <p>1 EGG X BURGUER +
-            100GR BATATA FRITA
-            + 1 ATIV PLUS</p>
-          <p class="price">R$ 25,50</p>
+          <img src="./img/hamburguers/burguer.jpg" alt="Produto 1">
+          <h3>BURGUER</h3>
+          <p>CARNE - ALFACE - CATUPIRY
+            MAIONESE - KETCHUP - BATATA PALHA </p>
+          <p class="price">R$ 11,00</p>
           <div class="quantity">
-            <button onclick="decreaseQuantity('quantity3')">-</button>
-            <input type="number" id="quantity3" value="1" min="1">
-            <button onclick="increaseQuantity('quantity3')">+</button>
+            <button onclick="decreaseQuantity('quantity1')">-</button>
+            <input type="number" id="quantity1" value="1" min="1">
+            <button onclick="increaseQuantity('quantity1')">+</button>
           </div>
-          <button onclick="addToCart('COMBO 1', 25.50, 'quantity3')">Comprar</button>
-
-          <!-- Adicione mais cards conforme necessário -->
+          <button onclick="addToCart('BURGUER', 11, 'quantity1')">Comprar</button>
         </div>
+      </li>
+      <li>
         <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>COMBO 2</h3>
-          <p> 1 EGG X BACON OU
-            CALABRESA + 100GR
-            BATATA FRITA + 1
-            ATIV PLUS </p>
-          <p class="price">R$ 28,50</p>
+          <img src="./img/hamburguers/egg-burguer.jpg" alt="Produto 1">
+          <h3>EGG BURGUER</h3>
+          <p>CARNE - OVO - ALFACE - CHEDDAR
+            CATUPIRY - MAIONESE - KETCHUP
+            CEBOLA - BATATA PALHA </p>
+          <p class="price">R$ 12,00</p>
           <div class="quantity">
-            <button onclick="decreaseQuantity('quantity4')">-</button>
-            <input type="number" id="quantity4" value="1" min="1">
-            <button onclick="increaseQuantity('quantity4')">+</button>
+            <button onclick="decreaseQuantity('quantity2')">-</button>
+            <input type="number" id="quantity2" value="1" min="1">
+            <button onclick="increaseQuantity('quantity2')">+</button>
           </div>
-          <button onclick="addToCart('COMBO 2', 28.50, 'quantity4')">Comprar</button>
-          <!-- Adicione mais cards conforme necessário -->
+          <button onclick="addToCart('BURGUER', 12, 'quantity2')">Comprar</button>
         </div>
+      </li>
+      <li>
         <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>COMBO 3</h3>
-          <p>1 EGG X BACON COM
-            CALABRESA + 150GR
-            BATATA FRITA + 1 ATIV
-            PLUS </p>
-          <p class="price">R$ 30,50</p>
-          <div class="quantity">
-            <button onclick="decreaseQuantity('quantity4')">-</button>
-            <input type="number" id="quantity4" value="1" min="1">
-            <button onclick="increaseQuantity('quantity4')">+</button>
-          </div>
-          <button onclick="addToCart('COMBO 3', 30.50, 'quantity4')">Comprar</button>
-          <!-- Adicione mais cards conforme necessário -->
-        </div>
-        <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>COMBO 4</h3>
-          <p> 2 EGG X BURGUER OU
-            CALABRESA +
-            200GR BATATA FRITA +
-            2 ATIV PLUS </p>
-          <p class="price">R$ 44,50</p>
-          <div class="quantity">
-            <button onclick="decreaseQuantity('quantity4')">-</button>
-            <input type="number" id="quantity4" value="1" min="1">
-            <button onclick="increaseQuantity('quantity4')">+</button>
-          </div>
-          <button onclick="addToCart('COMBO 4', 44.50, 'quantity4')">Comprar</button>
-          <!-- Adicione mais cards conforme necessário -->
-        </div>
-        <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>COMBO 5</h3>
-          <p>2 EGG X BACON OU
-            CALABRESA + 200GR
-            BATATA FRITA+ 1
-            ATIV PLUS </p>
-          <p class="price">R$ 50,50</p>
-          <div class="quantity">
-            <button onclick="decreaseQuantity('quantity4')">-</button>
-            <input type="number" id="quantity4" value="1" min="1">
-            <button onclick="increaseQuantity('quantity4')">+</button>
-          </div>
-          <button onclick="addToCart('COMBO 5', 50.50, 'quantity4')">Comprar</button>
-          <!-- Adicione mais cards conforme necessário -->
-        </div>
-        <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>COMBO 6</h3>
-          <p> 2 EGG X BACON COM
-            CALABRESA + 250GR
-            BATATA FRITA+ 2
-            ATIV PLUS</p>
-          <p class="price">R$ 54,50</p>
-          <div class="quantity">
-            <button onclick="decreaseQuantity('quantity4')">-</button>
-            <input type="number" id="quantity4" value="1" min="1">
-            <button onclick="increaseQuantity('quantity4')">+</button>
-          </div>
-          <button onclick="addToCart('COMBO 6', 54,50, 'quantity4')">Comprar</button>
-          <!-- Adicione mais cards conforme necessário -->
-        </div>
-
-
-      </div>
-      <h2 id="porcoes" class="font-1-xxl">Porções<span class="cor-p1">.</span></h2>
-
-      <div class="card-container">
-        <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>BATATA PEQUENA </h3>
-          <p>100GR BATATA FRITA</p>
+          <img src="./img/hamburguers/xburguer.jpg" alt="Produto 1">
+          <h3>X BURGUER</h3>
+          <p>CARNE - QUEIJO - ALFACE - CHEDDAR
+            CATUPIRY - MAIONESE - KETCHUP - BATATA
+            PALHA </p>
           <p class="price">R$ 14,00</p>
           <div class="quantity">
             <button onclick="decreaseQuantity('quantity3')">-</button>
             <input type="number" id="quantity3" value="1" min="1">
             <button onclick="increaseQuantity('quantity3')">+</button>
           </div>
-          <button onclick="addToCart('BATATA PEQUENA', 14, 'quantity3')">Comprar</button>
-
-          <!-- Adicione mais cards conforme necessário -->
+          <button onclick="addToCart('X BURGUER', 14, 'quantity3')">Comprar</button>
         </div>
+      </li>
+      <li>
         <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>BATATA MÉDIA</h3>
-          <p>150GR BATATA FRITA COM
-            CALABRESA + BACON +
-            CHEDDAR + CATUPIRY + </p>
-          <p class="price">R$ 18,00</p>
-          <div class="quantity">
-            <button onclick="decreaseQuantity('quantity4')">-</button>
-            <input type="number" id="quantity4" value="1" min="1">
-            <button onclick="increaseQuantity('quantity4')">+</button>
-          </div>
-          <button onclick="addToCart('BATATA MÉDIA', 18, 'quantity4')">Comprar</button>
-          <!-- Adicione mais cards conforme necessário -->
-        </div>
-        <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>BATATA GRANDE</h3>
-          <p>
-            250GR BATATA FRITA
-            COM CALABRESA +
-            BACON + CHEDDAR +
-            CATUPIRY</p>
-          <p class="price">R$ 29,90</p>
-          <div class="quantity">
-            <button onclick="decreaseQuantity('quantity')">-</button>
-            <input type="number" id="quantity" value="1" min="1">
-            <button onclick="increaseQuantity('quantity')">+</button>
-          </div>
-          <button onclick="addToCart('BATATA GRANDE', 29.90, 'quantity')">Comprar</button>
-        </div>
-      </div>
-      <h2 id="bebidas" class="font-1-xxl">Bebidas<span class="cor-p1">.</span></h2>
-      <div class="card-container">
-        <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>ATIV PLUS </h3>
-          <p>290ml</p>
-          <p class="price">R$ 2,50</p>
+          <img src="./img/hamburguers/xburguer.jpg" alt="Produto 1">
+          <h3>X BURGUER</h3>
+          <p>CARNE - QUEIJO - ALFACE - CHEDDAR
+            CATUPIRY - MAIONESE - KETCHUP - BATATA
+            PALHA </p>
+          <p class="price">R$ 14,00</p>
           <div class="quantity">
             <button onclick="decreaseQuantity('quantity3')">-</button>
             <input type="number" id="quantity3" value="1" min="1">
             <button onclick="increaseQuantity('quantity3')">+</button>
           </div>
-          <button onclick="addToCart('ATIV PLUS', 2.50, 'quantity3')">Comprar</button>
+          <button onclick="addToCart('X BURGUER', 14, 'quantity3')">Comprar</button>
+        </div>
+      </li>
 
-          <!-- Adicione mais cards conforme necessário -->
-        </div>
-        <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>COCA-COLA</h3>
-          <p>200ml</p>
-          <p class="price">R$ 3,50</p>
-          <div class="quantity">
-            <button onclick="decreaseQuantity('quantity4')">-</button>
-            <input type="number" id="quantity4" value="1" min="1">
-            <button onclick="increaseQuantity('quantity4')">+</button>
-          </div>
-          <button onclick="addToCart('COCA-COLA', 3.50, 'quantity4')">Comprar</button>
-          <!-- Adicione mais cards conforme necessário -->
-        </div>
-        <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>PEPSI BLACK</h3>
-          <p>200ml</p>
-          <p class="price">R$ 3,50</p>
-          <div class="quantity">
-            <button onclick="decreaseQuantity('quantity')">-</button>
-            <input type="number" id="quantity" value="1" min="1">
-            <button onclick="increaseQuantity('quantity')">+</button>
-          </div>
-          <button onclick="addToCart('PEPSI BLACK', 3.50, 'quantity')">Comprar</button>
-        </div>
-        <div class="card">
-          <img src="./img/burguer555.jpg" alt="Produto 1">
-          <h3>GUARANÁ ANTÁRTICA</h3>
-          <p>200ml</p>
-          <p class="price">R$ 3,50</p>
-          <div class="quantity">
-            <button onclick="decreaseQuantity('quantity')">-</button>
-            <input type="number" id="quantity" value="1" min="1">
-            <button onclick="increaseQuantity('quantity')">+</button>
-          </div>
-          <button onclick="addToCart('GUARANÁ ANTÁRTICA', 3.50, 'quantity')">Comprar</button>
-        </div>
+      <!-- <li><img src="img/burguer555.jpg" alt=""></li>
+      <li><img src="img/burguer555.jpg" alt=""></li>
+      <li><img src="img/burguer555.jpg" alt=""></li>
+      <li><img src="img/burguer555.jpg" alt=""></li>
+      <li><img src="img/burguer555.jpg" alt=""></li> -->
 
+    </ul>
+  </div>
+  <div class="arrow-nav">
+    <button class="prev"></button>
+    <button class="next"></button>
+  </div>
+
+
+
+  </div>
+  <footer class="footer-bg">
+    <div class="footer container">
+      <img src="./img/logo555.png" alt="555 Burguer">
+      <div class="footer-contato">
+        <h3 class="font-2-l-b cor-0">Contato</h3>
+        <ul class="font-2-m cor-5">
+          <li><a href="tel:+552199999999">+55 (24) 98135-7726</a></li>
+          <!-- <li><a href="mailto:contato@bikcraft.com">contato@bikcraft.com</a></li> -->
+          <li>Rua Euclydes de Oliveira, 555 - lopes Trovão</li>
+          <li>Petrópolis - RJ</li>
+        </ul>
+        <div class="footer-redes">
+          <a href="https://www.instagram.com/555.burguer/">
+            <img src="./img/redes/instagram.svg" alt="Instagram">
+          </a>
+        </div>
       </div>
-      <footer class="footer-bg">
-        <div class="footer container">
-          <img src="./img/logo555.png" alt="555 Burguer">
-          <div class="footer-contato">
-            <h3 class="font-2-l-b cor-0">Contato</h3>
-            <ul class="font-2-m cor-5">
-              <li><a href="tel:+552199999999">+55 (24) 98135-7726</a></li>
-              <!-- <li><a href="mailto:contato@bikcraft.com">contato@bikcraft.com</a></li> -->
-              <li>Rua Euclydes de Oliveira, 555 - lopes Trovão</li>
-              <li>Petrópolis - RJ</li>
-            </ul>
-            <div class="footer-redes">
-              <a href="https://www.instagram.com/555.burguer/">
-                <img src="./img/redes/instagram.svg" alt="Instagram">
-              </a>
-            </div>
-          </div>
-          <div class="footer-informacoes">
-            <h3 class="font-2-l-b cor-0">Informações</h3>
-            <nav>
-              <ul class="font-1-m cor-5">
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#combos">Combos</a></li>
-                <li><a href="#porcoes">Porções</a></li>
-                <li><a href="#bebidas">Bebidas</a></li>
-                <li><a href="./contato.html">Contato</a></li>
-              </ul>
-            </nav>
-          </div>
-          <p class="footer-copy font-2-m cor-6">555 Burguer © Alguns direitos reservados.</p>
-        </div>
-      </footer>
-      <script src="script.js"></script>
+      <div class="footer-informacoes">
+        <h3 class="font-2-l-b cor-0">Informações</h3>
+        <nav>
+          <ul class="font-1-m cor-5">
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#combos">Combos</a></li>
+            <li><a href="#porcoes">Porções</a></li>
+            <li><a href="#bebidas">Bebidas</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="footer-copy font-2-m cor-6">555 Burguer © Alguns direitos reservados 2024.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script type="module" src="js/script.js"></script>
+
 </body>
 
 </html>
