@@ -1,0 +1,65 @@
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras</title>
+  <style>
+    .cart-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cart-item {
+      border: 1px solid #ccc;
+      padding: 16px;
+      margin: 16px;
+      text-align: center;
+      width: 200px;
+    }
+
+    .cart-item img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Carrinho de Compras</h2>
+  <div class="cart-container" id="cart-container">
+    <!-- Itens do carrinho serão adicionados aqui -->
+  </div>
+  <h3>Total: R$ <span id="total">0,00</span></h3>
+
+  <script>
+    function loadCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartContainer = document.getElementById('cart-container');
+      let total = 0;
+
+      cart.forEach(item => {
+        const itemTotal = item.productPrice * item.quantity;
+        total += itemTotal;
+
+        const cartItem = document.createElement('div');
+        cartItem.className = 'cart-item';
+        cartItem.innerHTML = `
+                    <h3>${item.productName}</h3>
+                    <p>Preço: R$ ${item.productPrice.toFixed(2).replace('.', ',')}</p>
+                    <p>Quantidade: ${item.quantity}</p>
+                    <p>Total: R$ ${itemTotal.toFixed(2).replace('.', ',')}</p>
+                `;
+
+        cartContainer.appendChild(cartItem);
+      });
+
+      document.getElementById('total').innerText = total.toFixed(2).replace('.', ',');
+    }
+
+    document.addEventListener('DOMContentLoaded', loadCart);
+  </script>
+</body>
+
+</html>
