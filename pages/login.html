@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div id="overlay" class="overlay">
+    <div id="login-section" class="login-form">
+      <h2>Informe seus dados</h2>
+      <input type="text" id="login-name" placeholder="Nome" required>
+      <input type="text" id="login-address" placeholder="Endereço" required>
+      <input type="tel" id="login-phone" placeholder="Telefone Celular" required pattern="^[1-9]{2}9[0-9]{8}$" title="Por favor, insira um número de celular válido com DDD. Ex: 11987654321" inputmode="numeric">
+      <textarea id="login-observations" placeholder="Observações (opcional)"></textarea>
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
