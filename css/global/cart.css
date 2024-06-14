@@ -1,23 +1,8 @@
-/* Reset básico */
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  padding: 20px;
-} */
-
-/* Estilos para o título principal */
-/* h1 {
+/* Estilos para o título */
+h2 {
   text-align: center;
-  font-size: 2.5em;
-  color: #333;
   margin-bottom: 20px;
-} */
+}
 
 /* Container principal da lista de produtos */
 .product-list {
@@ -36,7 +21,7 @@ body {
   overflow: hidden;
   width: calc(25% - 20px);
   text-align: center;
-  padding: 20px;
+  padding: 15px; /* Ajuste de padding para cartões menores */
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -49,28 +34,35 @@ body {
 .product img {
   width: 100%;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Ajuste de margem para cartões menores */
 }
 
 /* Título do produto */
 .product h3 {
-  font-size: 1.5em;
+  font-size: 1.2em; /* Ajuste de fonte para cartões menores */
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 8px; /* Ajuste de margem para cartões menores */
 }
 
 /* Preço do produto */
-.product p {
-  font-size: 1.2em;
+.price {
+  font-size: 1em; /* Ajuste de fonte para cartões menores */
+  color: #b12704;
+  margin-bottom: 10px; /* Ajuste de margem para cartões menores */
+}
+
+/* Descrição do produto */
+.text {
+  font-size: 1em; /* Ajuste de fonte para cartões menores */
   color: #666;
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Ajuste de margem para cartões menores */
 }
 
 /* Estilos para o input de quantidade */
 .product input[type="number"] {
-  width: 60px;
+  width: 50px; /* Ajuste de largura para cartões menores */
   padding: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Ajuste de margem para cartões menores */
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -80,10 +72,10 @@ body {
   background-color: #28a745;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 15px; /* Ajuste de padding para cartões menores */
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 0.9em; /* Ajuste de fonte para cartões menores */
   transition: background-color 0.3s;
 }
 
@@ -96,7 +88,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #007bff;
+  background-color: var(--cor-p1);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -108,7 +100,7 @@ body {
 }
 
 .cart-toggle:hover {
-  background-color: #0056b3;
+  background-color: var(--cor-p2);
 }
 
 /* Estilos para o carrinho de compras como pop-up */
@@ -135,6 +127,8 @@ body {
 
 #cart-items {
   margin-bottom: 20px;
+  max-height: 300px; /* Limita a altura do carrinho para rolagem */
+  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
 }
 
 #cart-total {
@@ -183,7 +177,8 @@ body {
 
 @media (max-width: 480px) {
   .product {
-    width: 100%;
+    width: calc(100% - 20px); /* Ajuste para margem responsiva */
+    padding: 10px; /* Ajuste de padding para dispositivos móveis */
   }
 
   .cart {
@@ -191,6 +186,7 @@ body {
     right: 0;
     top: 0;
     transform: none;
+    padding: 10px; /* Ajuste de padding para dispositivos móveis */
   }
 
   .cart-toggle {

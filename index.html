@@ -22,15 +22,15 @@
           <li><a href="#combos">Combos</a></li>
           <li><a href="#porcoes">Porções</a></li>
           <li><a href="#bebidas">Bebidas</a></li>
-          <li id="login-menu-item"><a onclick="openLoginPopup()">Cadastro/Login</a></li>
+          <!-- <li id="login-menu-item"><a onclick="openLoginPopup()">Cadastro/Login</a></li> -->
           <li id="user-menu-item" style="display: none;">
           </li>
-          <li id="user-info-section">
+          <!-- <li id="user-info-section">
             <a id="" onclick="">
               <p>Bem Vindo: <span id="user-name"></span></p>
             </a>
             <button onclick="logout()">Logout</button>
-          </li>
+          </li> -->
         </ul>
         <!-- <div id="user-info-section" class="user-info" style="display:none;">
           <p>Usuário conectado: <span id="user-name"></span></p>
@@ -101,60 +101,144 @@
   </div> -->
 
   <h2 id="cardapio" class="font-1-xxl">Cardápio</h2>
+  <div class="product-list">
+    <div class="product">
+      <img src="./img/hamburguers/burguer.jpg" alt="Hamburguer 1" width="100%">
+      <h3>Burguer</h3>
+      <p class="text">CARNE - ALFACE - CATUPIRY MAIONESE - KETCHUP - BATATA PALHA</p>
+      <p class="price">R$ 11,00</p>
+      <input type="number" id="product1-quantity" min="1" value="1">
+      <button onclick="addToCart('Burguer', 11, 'product1-quantity')">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <img src="./img/hamburguers/egg-burguer.jpg" alt="Hamburguer 2" width="100%">
+      <h3>Egg Burguer</h3>
+      <p class="text">CARNE - OVO - ALFACE - CHEDDAR CATUPIRY - MAIONESE - KETCHUP - CEBOLA - BATATA PALHA</p>
+      <p class="price">R$ 12,00</p>
+      <input type="number" id="product2-quantity" min="1" value="1">
+      <button onclick="addToCart('Egg Burguer', 12, 'product2-quantity')">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <img src="./img/hamburguers/egg-burguer.jpg" alt="Hamburguer 3" width="100%">
+      <h3>X Burguer</h3>
+      <p class="text">CARNE - QUEIJO - ALFACE - CHEDDAR CATUPIRY - MAIONESE - KETCHUP - BATATA PALHA</p>
+      <p class="price">R$ 14,00</p>
+      <input type="number" id="product3-quantity" min="1" value="1">
+      <button onclick="addToCart('X Burguer', 14, 'product3-quantity')">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <img src="./img/hamburguers/egg-burguer.jpg" alt="Hamburguer 4" width="100%">
+      <h3>Egg X Burguer</h3>
+      <p class="text">CARNE - OVO - ALFACE - QUEIJO - CHEDDAR - CATUPIRY - MAIONESE - KETCHUP BATATA PALHA</p>
+      <p class="price">R$ 15,00</p>
+      <input type="number" id="product4-quantity" min="1" value="1">
+      <button onclick="addToCart('Egg X Burguer', 15, 'product4-quantity')">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <img src="./img/hamburguers/burguer.jpg" alt="Hamburguer 5" width="100%">
+      <h3>X Bacon</h3>
+      <p class="text">CARNE - BACON - ALFACE - QUEIJO - CHEDDAR - CATUPIRY - MAIONESE - KETCHUP - BATATA PALHA</p>
+      <p class="price">R$ 17,00</p>
+      <input type="number" id="product5-quantity" min="1" value="1">
+      <button onclick="addToCart('X Bacon', 17, 'product5-quantity')">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <img src="./img/hamburguers/burguer.jpg" alt="Hamburguer 6" width="100%">
+      <h3>X Calabresa</h3>
+      <p class="text">CARNE - CALABRESA - ALFACE - QUEIJO- CHEDDAR - CATUPIRY - MAIONESE
+        KETCHUP - BATATA PALHA</p>
+      <p class="price">R$ 17,00</p>
+      <input type="number" id="product6-quantity" min="1" value="1">
+      <button onclick="addToCart('X Calabresa', 17, 'product6-quantity')">Adicionar ao Carrinho</button>
+    </div>
 
-  <div class="product-list">
     <div class="product">
-      <img src="./img/hamburguers/burguer.jpg" alt="Hamburguer 1" width="100%">
-      <h3>Hamburguer Clássico</h3>
-      <p>R$ 20,00</p>
-      <input type="number" id="product1-quantity" min="1" value="1">
-      <button onclick="addToCart('Hamburguer Clássico', 20, 'product1-quantity')">Adicionar ao Carrinho</button>
+      <img src="./img/hamburguers/burguer.jpg" alt="Porção 1" width="100%">
+      <h3>Egg X Bacon</h3>
+      <p class="text">CARNE - OVO - ALFACE - QUEIJO
+        CHEDDAR - CATUPIRY - MAIONESE
+        KETCHUP - BATATA PALHA </p>
+      <p class="price">R$ 18,00</p>
+      <input type="number" id="product8-quantity" min="1" value="1">
+      <button onclick="addToCart('Egg X Bacon', 18, 'product8-quantity')">Adicionar ao Carrinho</button>
     </div>
-  </div>
-  <h2 id="porcoes" class="font-1-xxl">Porções</h2>
-  <div class="product-list">
     <div class="product">
-      <img src="./img/hamburguers/burguer.jpg" alt="Hamburguer 1" width="100%">
-      <h3>Hamburguer Clássico</h3>
-      <p>R$ 20,00</p>
-      <input type="number" id="product1-quantity" min="1" value="1">
-      <button onclick="addToCart('Hamburguer Clássico', 20, 'product1-quantity')">Adicionar ao Carrinho</button>
+      <img src="./img/hamburguers/burguer.jpg" alt="Porção 2" width="100%">
+      <h3>X Bacon com Calabresa</h3>
+      <p class="text">CARNE - BACON - CALABRESA
+        ALFACE - QUEIJO - CHEDDAR
+        CATUPIRY - MAIONESE -
+        KETCHUP - BATATA PALHA</p>
+      <p class="price">R$ 18,00</p>
+      <input type="number" id="product9-quantity" min="1" value="1">
+      <button onclick="addToCart('X Bacon com Calabresa', 18, 'product9-quantity')">Adicionar ao Carrinho</button>
     </div>
-  </div>
-  <h2 id="combos" class="font-1-xxl">Combos Promocionais</h2>
-  <div class="product-list">
-    <div class="product">
-      <img src="./img/hamburguers/burguer.jpg" alt="Hamburguer 1" width="100%">
-      <h3>Hamburguer Clássico</h3>
-      <p>R$ 20,00</p>
-      <input type="number" id="product1-quantity" min="1" value="1">
-      <button onclick="addToCart('Hamburguer Clássico', 20, 'product1-quantity')">Adicionar ao Carrinho</button>
-    </div>
-  </div>
-  <h2 id="bebidas" class="font-1-xxl">Bebidas</h2>
-  <div class="product-list">
-    <div class="product">
-      <img src="./img/hamburguers/burguer.jpg" alt="Hamburguer 1" width="100%">
-      <h3>Hamburguer Clássico</h3>
-      <p>R$ 20,00</p>
-      <input type="number" id="product1-quantity" min="1" value="1">
-      <button onclick="addToCart('Hamburguer Clássico', 20, 'product1-quantity')">Adicionar ao Carrinho</button>
-    </div>
-  </div>
 
-  <!-- formato pop up -->
-  <div class="cart" id="cart-popup">
-    <h2>Carrinho de Compras</h2>
-    <div id="cart-items"></div>
-    <p id="cart-total"></p>
-    <button onclick="sendOrder()">Enviar Pedido via WhatsApp</button>
-    <button onclick="clearCart()">Limpar Carrinho</button>
-    <button class="close-btn" onclick="toggleCart()">Fechar</button>
-  </div>
-  <button class="cart-toggle" onclick="toggleCart()">Carrinho de Compras</button>
+    <div class="product">
+      <img src="./img/hamburguers/burguer.jpg" alt="Hamburguer 9" width="100%">
+      <h3>Egg X Calabresa</h3>
+      <p class="text">CARNE - OVO - CALABRESA - ALFACE - QUEIJO - PRESUNTO - CHEDDAR - CATUPIRY - MAIONESE - KETCHUP - BATATA PALHA</p>
+      <p class="price">R$ 18,00</p>
+      <input type="number" id="product11-quantity" min="1" value="1">
+      <button onclick="addToCart('Egg X Calabresa', 18, 'product11-quantity')">Adicionar ao Carrinho</button>
+    </div>
 
-  <!-- fixo carrinho -->
-  <!-- <div class="cart">
+    <div class="product">
+      <img src="./img/hamburguers/burguer.jpg" alt="Hamburguer 8" width="100%">
+      <h3>Egg X Bacon com Calabresa</h3>
+      <p class="text">CARNE - OVO - BACON - CALABRESA -
+        ALFACE - QUEIJO - CHEDDAR
+        CATUPIRY - MAIONESE -
+        KETCHUP - BATATA PALHA </p>
+      <p class="price">R$ 21,00</p>
+      <input type="number" id="product10-quantity" min="1" value="1">
+      <button onclick="addToCart('Egg X Bacon com Calabresa', 21, 'product10-quantity')">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <img src="./img/hamburguers/burguer.jpg" alt="Hamburguer 7" width="100%">
+      <h3>X Tudo</h3>
+      <p class="text">CARNE - BACON - OVO - CALABRESA - ALFACE - QUEIJO - CHEDDAR - CATUPIRY - MAIONESE - KETCHUP - MILHO - ERVILHA - AZEITONA - BATATA PALHA</p>
+      <p class="price">R$ 23,00</p>
+      <input type="number" id="product7-quantity" min="1" value="1">
+      <button onclick="addToCart('X Tudo', 23, 'product7-quantity')">Adicionar ao Carrinho</button>
+    </div>
+
+    <!-- <h2 id="porcoes" class="font-1-xxl">Porções</h2>
+    <h2 id="combos" class="font-1-xxl">Combos Promocionais</h2>
+
+    <h2 id="bebidas" class="font-1-xxl">Bebidas</h2> -->
+
+
+    <!-- formato pop up -->
+    <!-- <div class="cart" id="cart-popup">
+      <h2>Carrinho de Compras</h2>
+      <div id="cart-items"></div>
+      <p id="cart-total"></p>
+      <button onclick="sendOrder()">Enviar Pedido via WhatsApp</button>
+      <button onclick="clearCart()">Limpar Carrinho</button>
+      <button class="close-btn" onclick="toggleCart()">Fechar</button>
+    </div>
+    <button class="cart-toggle" onclick="toggleCart()">Carrinho de Compras</button> -->
+
+    <div class="cart" id="cart-popup">
+      <h2>Carrinho de Compras</h2>
+      <div id="cart-items"></div>
+      <p id="cart-total"></p>
+      <div id="user-details" style="display: none;">
+        <h3>Informe seus dados para finalizar</h3>
+        <input type="text" id="finalize-name" placeholder="Nome" required>
+        <input type="text" id="finalize-address" placeholder="Endereço" required>
+        <input type="tel" id="finalize-phone" placeholder="Telefone Celular" required pattern="^[1-9]{2}9[0-9]{8}$" title="Por favor, insira um número de celular válido com DDD. Ex: 11987654321" inputmode="numeric">
+        <textarea id="finalize-observations" placeholder="Observações (opcional)"></textarea>
+      </div>
+      <button id="finalize-btn" onclick="showUserDetails()">Finalizar Compra</button>
+      <button onclick="sendOrder()" style="display: none;" id="send-order-btn">Finalizar Compra</button>
+      <button onclick="clearCart()">Limpar Carrinho</button>
+      <button class="close-btn" onclick="toggleCart()">Fechar</button>
+    </div>
+
+    <!-- fixo carrinho -->
+    <!-- <div class="cart">
     <h2>Carrinho de Compras</h2>
     <div id="cart-items"></div>
     <p id="cart-total"></p>

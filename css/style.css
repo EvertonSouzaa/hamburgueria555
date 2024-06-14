@@ -1,14 +1,15 @@
 @import "./global/global.css";
 @import "./utilidades/tipografia.css";
 @import "./utilidades/cores.css";
-@import "./global/card.css";
+/* @import "./global/card.css"; */
 @import "./global/footer.css";
 @import "./global/slide.css";
 @import "./global/login.css";
-@import "./global/newcard.css";
+/* @import "./global/newcard.css"; */
 @import "./global/header.css";
+@import "./global/popupForm.css";
 @import "./global/cart.css";
-@import "./global/user.css";
+/* @import "./global/user.css"; */
 /* Utilidades */
 @import "./utilidades/componentes.css";
 

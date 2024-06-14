@@ -94,14 +94,29 @@ function displayCart() {
   cartItems.innerHTML = "";
   let total = 0;
 
+  // cart.forEach((item) => {
+  //   cartItems.innerHTML += `<p>${item.productName} - R$ ${item.price} x ${item.quantity}</p>`;
+  //   total += item.price * item.quantity;
+  // });
+
   cart.forEach((item) => {
-    cartItems.innerHTML += `<p>${item.productName} - R$ ${item.price} x ${item.quantity}</p>`;
+    cartItems.innerHTML += `
+      <p class="text">
+        ${item.productName} - R$ ${item.price.toFixed(2).replace(".", ",")} x ${
+      item.quantity
+    }
+        <button class="close-btn" onclick="removeFromCart('${
+          item.productName
+        }')">X</button>
+      </p>`;
     total += item.price * item.quantity;
   });
 
   document.getElementById(
     "cart-total"
-  ).textContent = `Total: R$ ${total.toFixed(2)}`;
+  ).innerHTML = `<span class="text">Total:</span><span class="price"> R$ ${total
+    .toFixed(2)
+    .replace(".", ",")}</span>`;
 }
 
 /**
@@ -110,6 +125,18 @@ function displayCart() {
 function clearCart() {
   cart = [];
   displayCart();
+}
+
+/**
+ * Função para remover item do carrinho
+ */
+function removeFromCart(productName) {
+  const itemIndex = cart.findIndex((item) => item.productName === productName);
+
+  if (itemIndex !== -1) {
+    cart.splice(itemIndex, 1);
+    displayCart();
+  }
 }
 
 /**
@@ -259,3 +286,48 @@ document
     // Lógica para salvar as informações do usuário
     closeUserInfoPopup();
   });
+
+function showUserDetails() {
+  document.getElementById("user-details").style.display = "block";
+  document.getElementById("finalize-btn").style.display = "none";
+  document.getElementById("send-order-btn").style.display = "block";
+}
+
+function sendOrder() {
+  const name = document.getElementById("finalize-name").value;
+  const address = document.getElementById("finalize-address").value;
+  const phone = document.getElementById("finalize-phone").value;
+  const observations = document.getElementById("finalize-observations").value;
+
+  if (!name || !address || !phone) {
+    alert("Por favor, preencha Nome, Telefone e Endereço corretamente.");
+    return;
+  }
+
+  if (cart.length === 0) {
+    alert("Por favor, adicione ao menos um produto ao carrinho.");
+    return;
+  }
+
+  let message = `Pedido de ${name} - ${address} - Tel: ${phone}:\n`;
+  let total = 0;
+
+  cart.forEach((item) => {
+    message += `${item.productName} - R$ ${item.price
+      .toFixed(2)
+      .replace(".", ",")} x ${item.quantity}\n`;
+    total += item.price * item.quantity;
+  });
+
+  message += `\nTotal: R$ ${total.toFixed(2).replace(".", ",")}`;
+
+  if (observations) {
+    message += `\nObservações: ${observations}`;
+  }
+
+  const phoneNumber = "21979026552";
+  const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+    message
+  )}`;
+  window.open(whatsappURL, "_blank");
+}
